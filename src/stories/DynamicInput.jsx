@@ -112,12 +112,12 @@ const DynamicInput = ({
 
   // Determine outline color
   let outlineColor = 'outline-gray-500';
-  if (isInputDisabled) {
-    outlineColor = 'outline-[#D0D5DD]';
-  } else if (isError) {
-    outlineColor = 'outline-[#D92D20]';
+  if (isError) {
+    outlineColor = '!outline-[#D92D20]'; // Changed: Tailwind !important prefix
+  } else if (isInputDisabled) {
+    outlineColor = '!outline-[#D0D5DD]'; // Changed: Tailwind !important prefix
   } else if (inputFocused) {
-    outlineColor = 'outline-[#8a3ffc]';
+    outlineColor = '!outline-[#8a3ffc]'; // Changed: Tailwind !important prefix
   }
 
   // Disabled background
