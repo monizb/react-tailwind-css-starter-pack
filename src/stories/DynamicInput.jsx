@@ -97,7 +97,7 @@ const DynamicInput = ({
   hintClass = 'text-gray-500 text-[11px] font-normal font-[\'Inter\'] leading-[18px]',
   hoverableInput = false,
   focusableInput = true,
-  inputBoxClass = 'pr-0.5 py-2 bg-white rounded-md outline outline-1 outline-offset-[-1px] outline-gray-500 inline-flex justify-start items-center',
+  inputBoxClass = 'pr-0.5 py-2 rounded-md outline outline-1 outline-offset-[-1px] outline-gray-500 inline-flex justify-start items-center', // Removed bg-white from default
 }) => {
   const [value, setValue] = useState(inputValue);
   const [inputFocused, setInputFocused] = useState(false);
@@ -119,7 +119,7 @@ const DynamicInput = ({
     outlineColor = '!outline-[#8a3ffc]';
   }
 
-  // Disabled background - remove opacity from here
+  // Disabled background - this now solely controls background based on disabled state
   const disabledBg = isInputDisabled ? 'bg-[#EAECF0] cursor-not-allowed' : 'bg-white';
   const disabledLabelClass = isInputDisabled ? 'text-[#98A2B3]' : '';
   const disabledHintClass = isInputDisabled ? 'text-[#98A2B3]' : '';
