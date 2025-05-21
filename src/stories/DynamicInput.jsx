@@ -6,6 +6,8 @@ const DynamicInput = ({
   showLabel = true,
   label = 'Email',
   labelClass = 'text-slate-700 text-[11px] font-medium font-[\'Inter\'] leading-[18px]',
+  showHttpPrefix = true, // New prop
+  showLeadingDropdown = true, // New prop
   leadingGroup: leadingGroupProp = [
     {
       type: 'text',
@@ -126,7 +128,17 @@ const DynamicInput = ({
 
 
   // Resolve leadingGroup and rightActions to ensure icons are functions if not already
-  const leadingGroup = leadingGroupProp.map(item => ({
+  const leadingGroup = leadingGroupProp
+    .filter(item => {
+      if (item.content === 'http://' && !showHttpPrefix) {
+        return false;
+      }
+      if (item.type === 'dropdown' && !showLeadingDropdown) {
+        return false;
+      }
+      return true;
+    })
+    .map(item => ({
     ...item,
     icon: typeof item.icon === 'function' ? item.icon : () => item.icon,
   }));

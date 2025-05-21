@@ -14,6 +14,8 @@ export default {
     showLabel: { control: "boolean" },
     label: { control: "text" },
     labelClass: { control: "text" },
+    showHttpPrefix: { control: "boolean" }, // New argType
+    showLeadingDropdown: { control: "boolean" }, // New argType
     showInputIcon: { control: "boolean" },
     inputValue: { control: "text" },
     inputPlaceholder: { control: "text" },
@@ -40,6 +42,8 @@ Default.args = {
   isVisible: true,
   showLabel: true,
   label: "Email",
+  showHttpPrefix: true,
+  showLeadingDropdown: true,
   inputValue: "olivia@untitledui.com",
   inputPlaceholder: "Enter your email",
   isInputDisabled: false,
@@ -110,4 +114,23 @@ export const NoRightActions = Template.bind({});
 NoRightActions.args = {
   ...Default.args,
   showRightActions: false,
+};
+
+export const HideHttpPrefix = Template.bind({});
+HideHttpPrefix.args = {
+  ...Default.args,
+  showHttpPrefix: false,
+};
+
+export const HideLeadingDropdown = Template.bind({});
+HideLeadingDropdown.args = {
+  ...Default.args,
+  showLeadingDropdown: false,
+};
+
+export const HideBothLeadingItems = Template.bind({});
+HideBothLeadingItems.args = {
+  ...Default.args,
+  showHttpPrefix: false,
+  showLeadingDropdown: false,
 };
