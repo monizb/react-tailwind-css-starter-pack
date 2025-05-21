@@ -113,7 +113,7 @@ const DynamicInput = ({
   // Determine outline color
   let outlineColor = 'outline-gray-500';
   if (isInputDisabled) {
-    outlineColor = 'outline-gray-300';
+    outlineColor = 'outline-[#D0D5DD]';
   } else if (isError) {
     outlineColor = 'outline-[#D92D20]';
   } else if (inputFocused) {
@@ -121,7 +121,7 @@ const DynamicInput = ({
   }
 
   // Disabled background
-  const disabledBg = isInputDisabled ? 'bg-gray-100 opacity-60 cursor-not-allowed' : 'bg-white';
+  const disabledBg = isInputDisabled ? 'bg-[#EAECF0] opacity-60 cursor-not-allowed' : 'bg-white';
 
   return (
     <section className="inline-flex flex-col justify-start items-start">
