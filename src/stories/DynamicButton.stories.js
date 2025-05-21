@@ -1,167 +1,126 @@
+
 import { fn } from '@storybook/test';
-import DynamicButton from './DynamicButton';
+import Alert from './DynamicComponent';
 
 export default {
-  title: 'Example/DynamicButton',
-  component: DynamicButton,
+  title: 'Example/Alert',
+  component: Alert,
   tags: ['autodocs'],
   parameters: {
-    layout: 'centered',
+    layout: 'fullscreen',
   },
   args: {
-    buttonText: 'Click me',
-    iconStart: false,
-    iconEnd: false,
-    bgColor: 'violet-600',
-    textColor: 'white',
-    borderColor: 'violet-600',
-    textSize: 'xs',
-    font: 'Inter',
-    hasOutline: true,
-    rounded: 'md',
-    px: 2,
-    py: '[3px]',
-    startIconColor: 'white',
-    endIconColor: '#344054',
-    isDisabled: false,
+    title: 'Alert Message',
+    bgColor: 'bg-amber-300',
+    textColor: 'text-gray-900',
+    iconColor: '#101828',
+    outlineIconColor: '#344054',
+    size: 'h-6',
+    textSize: 'text-xs',
+    rounded: 'rounded-md',
+    hasOutlineIcon: true,
+    hasInnerIcon: true,
     isVisible: true,
-    customClasses: '',
-    onClick: fn(),
+    className: '',
+    px: 'px-2',
+    py: 'py-[3px]',
+    iconWidth: '12',
+    iconHeight: '12',
   },
 };
 
 export const Default = {
-  args: {},
-};
-
-export const WithStartIcon = {
   args: {
-    iconStart: true,
-    buttonText: 'Start Icon',
-  },
-};
-
-export const WithEndIcon = {
-  args: {
-    iconEnd: true,
-    buttonText: 'End Icon',
-  },
-};
-
-export const WithBothIcons = {
-  args: {
-    iconStart: true,
-    iconEnd: true,
-    buttonText: 'Both Icons',
-  },
-};
-
-export const DifferentBgColor = {
-  args: {
-    bgColor: 'blue-500',
-    buttonText: 'Blue Background',
-  },
-};
-
-export const DifferentTextColor = {
-  args: {
-    textColor: 'black',
-    buttonText: 'Black Text',
-  },
-};
-
-export const DifferentBorderColor = {
-  args: {
-    borderColor: 'green-500',
-    buttonText: 'Green Border',
-  },
-};
-
-export const DifferentTextSize = {
-  args: {
-    textSize: 'lg',
-    buttonText: 'Large Text',
-  },
-};
-
-export const DifferentFont = {
-  args: {
-    font: 'Arial',
-    buttonText: 'Arial Font',
-  },
-};
-
-export const NoOutline = {
-  args: {
-    hasOutline: false,
-    buttonText: 'No Outline',
-  },
-};
-
-export const DifferentRounded = {
-  args: {
-    rounded: 'full',
-    buttonText: 'Rounded Full',
-  },
-};
-
-export const DifferentPadding = {
-  args: {
-    px: 4,
-    py: '[5px]',
-    buttonText: 'Different Padding',
-  },
-};
-
-export const DifferentIconColors = {
-  args: {
-    iconStart: true,
-    iconEnd: true,
-    startIconColor: 'red',
-    endIconColor: 'purple',
-    buttonText: 'Different Icon Colors',
-  },
-};
-
-export const Disabled = {
-  args: {
-    isDisabled: true,
-    buttonText: 'Disabled',
+    title: 'Default Alert',
   },
 };
 
 export const Hidden = {
   args: {
+    title: 'Hidden Alert',
     isVisible: false,
-    buttonText: 'Hidden',
   },
 };
 
-export const CustomClasses = {
+export const NoInnerIcon = {
   args: {
-    customClasses: 'uppercase tracking-wider',
-    buttonText: 'Custom Classes',
+    title: 'No Inner Icon',
+    hasInnerIcon: false,
   },
 };
 
-export const AllProps = {
+export const NoOutlineIcon = {
   args: {
-    buttonText: 'All Props',
-    iconStart: true,
-    iconEnd: true,
-    bgColor: 'red-500',
-    textColor: 'yellow',
-    borderColor: 'orange-500',
-    textSize: 'xl',
-    font: 'Verdana',
-    hasOutline: false,
-    rounded: 'xl',
-    px: 6,
-    py: '[7px]',
-    startIconColor: 'blue',
-    endIconColor: 'green',
-    isDisabled: false,
+    title: 'No Outline Icon',
+    hasOutlineIcon: false,
+  },
+};
+
+export const NoIcons = {
+  args: {
+    title: 'No Icons',
+    hasInnerIcon: false,
+    hasOutlineIcon: false,
+  },
+};
+
+export const CustomColors = {
+  args: {
+    title: 'Custom Colors',
+    bgColor: 'bg-red-500',
+    textColor: 'text-white',
+    iconColor: 'white',
+    outlineIconColor: 'white',
+  },
+};
+
+export const LargeSize = {
+  args: {
+    title: 'Large Size',
+    size: 'h-8',
+    textSize: 'text-sm',
+    iconWidth: '16',
+    iconHeight: '16'
+  },
+};
+
+export const SmallSize = {
+  args: {
+    title: 'Small Size',
+    size: 'h-4',
+    textSize: 'text-xxs',
+    iconWidth: '8',
+    iconHeight: '8',
+  },
+};
+
+export const RoundedNone = {
+  args: {
+    title: 'Rounded None',
+    rounded: 'rounded-none',
+  },
+};
+
+export const CustomPadding = {
+  args: {
+    title: 'Custom Padding',
+    px: 'px-4',
+    py: 'py-2',
+  },
+};
+
+export const CustomClassName = {
+  args: {
+    title: 'Custom ClassName',
+    className: 'uppercase',
+  },
+};
+
+export const AllOptionsFalse = {
+  args: {
+    title: 'All Options False',
+    hasInnerIcon: false,
+    hasOutlineIcon: false,
     isVisible: true,
-    customClasses: 'shadow-md',
   },
 };
