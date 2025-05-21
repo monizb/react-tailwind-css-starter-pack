@@ -1,8 +1,8 @@
 import "./App.css";
 import TypeTextStylePrimarySizeXsStateDefault from "./Comp2";
 import TypeTextStylePrimarySizexsStateDefault2 from "./Comp1";
+import DynamicInput from "./stories/DynamicInput";
 import StateHover from "./StateHover";
-import HyCard from "./stories/HyCard";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <TypeTextStylePrimarySizexsStateDefault2 />
       <StateHover />
       <TypeTextStylePrimarySizeXsStateDefault/>
-      <HyCard />
+      <DynamicInput isInputDisabled={true}/>
     </main>
   );
 }
