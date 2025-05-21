@@ -1,5 +1,5 @@
 import { fn } from '@storybook/test';
-import InputVariantsDemo from './InputField';
+import InputVariantsDemo from './InputVariantsDemo';
 
 export default {
   title: 'Form/InputField',
