@@ -19,6 +19,9 @@ const config = {
   },
   "staticDirs": [
     "../public"
-  ]
+  ],
+  options: {
+        postCss: true,
+      },
 };
 export default config;
