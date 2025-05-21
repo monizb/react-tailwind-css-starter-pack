@@ -4,6 +4,7 @@ import DynamicInput from "./DynamicInput";
 export default {
   title: "Components/DynamicInput",
   component: DynamicInput,
+  tags: ['autodocs'],
   parameters: {
     layout: "centered",
   },
