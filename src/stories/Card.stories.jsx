@@ -1,9 +1,9 @@
 import { fn } from '@storybook/test';
-import { ColorCardSelected } from './Card';
+import HyCard from './Card2';
 
 export default {
   title: 'Example/ColorCardSelected',
-  component: ColorCardSelected,
+  component: HyCard,
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
